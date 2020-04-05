@@ -19,7 +19,12 @@ const App: React.FunctionComponent<{}> = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <div className="App"></div>
+      <div className="App">
+        <Grid container component="main" className={classes.main}>
+          <Grid item xs={12} md={4} className={classes.items}></Grid>
+          <Grid item xs={12} md={8} className={classes.items}></Grid>
+        </Grid>
+      </div>
     </React.Fragment>
   );
 };
