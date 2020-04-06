@@ -54,6 +54,9 @@ const useStyles = makeStyles((theme: AugmentedTheme) =>
     items: {
       padding: theme.spacing(4),
     },
+    formPanel: {
+      backgroundColor: theme.palette.grey[900],
+    },
   })
 );
 
@@ -65,7 +68,12 @@ const App: React.FunctionComponent<{}> = () => {
         <CssBaseline />
         <div className="App">
           <Grid container component="main" className={classes.main}>
-            <Grid item xs={12} md={4} className={classes.items}></Grid>
+            <Grid
+              item
+              xs={12}
+              md={4}
+              className={(classes.items, classes.formPanel)}
+            ></Grid>
             <Grid item xs={12} md={8} className={classes.items}></Grid>
           </Grid>
         </div>
