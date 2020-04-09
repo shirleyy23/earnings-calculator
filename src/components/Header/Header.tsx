@@ -5,13 +5,18 @@ interface Props {
 	title: string;
 }
 
-const Header: React.FunctionComponent<Props> = (props) => {
+const Header: React.FunctionComponent<Props> = ({ title }) => {
 	return (
 		<header>
-			<Typography component="h1" variant="h3" gutterBottom color="primary">
-				{props.title}
+			<Typography
+				data-testid="Header"
+				component="h1"
+				variant="h3"
+				gutterBottom
+				color="primary"
+			>
+				{title}
 			</Typography>
-      ;
 		</header>
 	);
 };
