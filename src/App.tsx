@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core/styles';
 import Header from './components/Header/Header';
 import Form from './components/Form/Form';
+import Panel from './components/Panel/Panel';
 import Chart from './components/Chart/Chart';
 import GlobalProvider from './GlobalContext';
 
@@ -105,6 +106,7 @@ const App: React.FunctionComponent<{}> = () => {
             </Grid>
             <Grid item xs={12} md={8} className={classes.items}>
               <Chart />
+              <Panel />
             </Grid>
           </Grid>
         </div>
