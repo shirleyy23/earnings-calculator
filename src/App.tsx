@@ -65,6 +65,28 @@ const useStyles = makeStyles((theme: AugmentedTheme) =>
 
 const App: React.FunctionComponent<{}> = () => {
   const classes = useStyles();
+
+  const [data, setData] = useState({
+    amount: 0,
+    plan: 'select plan',
+    monthlyEarnings: 0,
+    yearlyEarnings: 0,
+    updateData: (name: string, value: any) => {
+      setData((data) => ({ ...data, [name]: value }));
+    },
+  });
+
+  const calculateEarnings = (number: number, option: string): void => {
+    const base = option === 'basic' ? 5 : 10;
+    const commission =
+      option === 'basic' ? number * base : number * base * 1.25;
+    setData((data) => ({
+      ...data,
+      monthlyEarnings: commission,
+      yearlyEarnings: commission * 12,
+    }));
+  };
+
   return (
     <GlobalProvider data={data}>
       <ThemeProvider theme={theme}>
@@ -78,6 +100,7 @@ const App: React.FunctionComponent<{}> = () => {
               className={`${classes.items} ${classes.formPanel}`}
             >
               <Header title="Calculate Earnings"></Header>
+              <Form onSubmit={calculateEarnings} />
             </Grid>
             <Grid item xs={12} md={8} className={classes.items}></Grid>
           </Grid>
