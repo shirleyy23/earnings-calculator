@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Grid } from '@material-ui/core';
 import {
@@ -9,6 +9,8 @@ import {
   ThemeProvider,
 } from '@material-ui/core/styles';
 import Header from './components/Header/Header';
+import Form from './components/Form/Form';
+import GlobalProvider from './GlobalContext';
 
 declare module '@material-ui/core/styles/createMuiTheme' {
   interface Theme {
@@ -64,7 +66,7 @@ const useStyles = makeStyles((theme: AugmentedTheme) =>
 const App: React.FunctionComponent<{}> = () => {
   const classes = useStyles();
   return (
-    <React.Fragment>
+    <GlobalProvider data={data}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="App">
@@ -81,7 +83,7 @@ const App: React.FunctionComponent<{}> = () => {
           </Grid>
         </div>
       </ThemeProvider>
-    </React.Fragment>
+    </GlobalProvider>
   );
 };
 
