@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core/styles';
 import Header from './components/Header/Header';
 import Form from './components/Form/Form';
+import Chart from './components/Chart/Chart';
 import GlobalProvider from './GlobalContext';
 
 declare module '@material-ui/core/styles/createMuiTheme' {
@@ -102,7 +103,9 @@ const App: React.FunctionComponent<{}> = () => {
               <Header title="Calculate Earnings"></Header>
               <Form onSubmit={calculateEarnings} />
             </Grid>
-            <Grid item xs={12} md={8} className={classes.items}></Grid>
+            <Grid item xs={12} md={8} className={classes.items}>
+              <Chart />
+            </Grid>
           </Grid>
         </div>
       </ThemeProvider>
