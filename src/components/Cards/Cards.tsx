@@ -57,18 +57,16 @@ const Cards: React.FunctionComponent<Props> = (Props) => {
 
   return (
     <Grid item xs={12} md={6}>
-      <Card className={classes.cards}>
+      <Card className={classes.cards} data-testid={`earnings-card-${title}`}>
         <CardContent>
           <Typography variant="h5" component="h2" className={classes.heading}>
             {formattedTitle} Earnings
-            <TrendingUpIcon className={`${classes.icon}`} />
+            <TrendingUpIcon
+              data-testid={`earnings-icon-${title}`}
+              className={`${classes.icon}`}
+            />
           </Typography>
-          <Typography
-            variant="h4"
-            component="p"
-            data-testid={`${title}Earnings`}
-            color="primary"
-          >
+          <Typography variant="h4" component="p" color="primary">
             {userEarnings}
           </Typography>
         </CardContent>
