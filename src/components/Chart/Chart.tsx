@@ -29,7 +29,10 @@ const Chart = () => {
   };
   return (
     <React.Fragment>
-      <List>
+      <List
+        aria-label="Legend for earnings chart"
+        style={{ textAlign: 'center' }}
+      >
         <Legend title="Monthly" color={monthlyColour} />
         <Legend title="Yearly" color={yearlyColour} />
       </List>
