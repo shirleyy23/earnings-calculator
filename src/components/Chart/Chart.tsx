@@ -28,36 +28,42 @@ const Chart = () => {
     },
   };
   return (
-    <Bar
-      data={earnings.data}
-      options={{
-        legend: {
-          display: false,
-        },
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-                suggestedMax: 100,
+    <React.Fragment>
+      <List>
+        <Legend title="Monthly" color={monthlyColour} />
+        <Legend title="Yearly" color={yearlyColour} />
+      </List>
+      <Bar
+        data={earnings.data}
+        options={{
+          legend: {
+            display: false,
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                  suggestedMax: 100,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Earnings ($)',
+                },
               },
-              scaleLabel: {
-                display: true,
-                labelString: 'Earnings ($)',
+            ],
+            xAxes: [
+              {
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Payment Cycle',
+                },
               },
-            },
-          ],
-          xAxes: [
-            {
-              scaleLabel: {
-                display: true,
-                labelString: 'Payment Cycle',
-              },
-            },
-          ],
-        },
-      }}
-    ></Bar>
+            ],
+          },
+        }}
+      ></Bar>
+    </React.Fragment>
   );
 };
 
