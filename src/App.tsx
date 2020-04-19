@@ -77,8 +77,6 @@ const App: React.FunctionComponent<{}> = () => {
             >
               <Header title="Calculate Earnings"></Header>
             </Grid>
-              className={(classes.items, classes.formPanel)}
-            ></Grid>
             <Grid item xs={12} md={8} className={classes.items}></Grid>
           </Grid>
         </div>
