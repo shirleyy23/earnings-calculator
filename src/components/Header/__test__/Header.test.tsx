@@ -7,21 +7,21 @@ afterEach(cleanup);
 type HeaderProps = React.ComponentProps<typeof Header>;
 
 function renderHeader(props: Partial<HeaderProps> = {}) {
-	const defaultProps: HeaderProps = {
-		title: 'Calculate Earnings',
-	};
-	return render(<Header {...defaultProps} {...props} />);
+  const defaultProps: HeaderProps = {
+    title: 'Calculate Earnings',
+  };
+  return render(<Header {...defaultProps} {...props} />);
 }
 
 const testProps = {
-	title: 'testStr',
+  title: 'testStr',
 };
 
 const { title } = testProps;
 
 test('header renders correctly', () => {
-	const { getByTestId } = renderHeader(testProps);
-	const header = getByTestId('Header');
-	expect(header.tagName).toBe('H1');
-	expect(header.textContent).toBe(title);
+  const { getByTestId } = renderHeader(testProps);
+  const header = getByTestId('Header');
+  expect(header.tagName).toBe('H1');
+  expect(header.textContent).toBe(title);
 });
