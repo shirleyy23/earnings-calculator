@@ -16,14 +16,45 @@ const Chart = () => {
       labels: ['Monthly', 'Yearly'],
       datasets: [
         {
-          label: 'Earnings',
+          label: 'Payment Period',
           data: [monthlyEarnings, yearlyEarnings],
           backgroundColor: [` ${monthlyColour}`, `${yearlyColour}`],
         },
       ],
     },
   };
-  return <Bar data={earnings.data}></Bar>;
+  return (
+    <Bar
+      data={earnings.data}
+      options={{
+        legend: {
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                suggestedMax: 100,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: 'Earnings ($)',
+              },
+            },
+          ],
+          xAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: 'Payment Cycle',
+              },
+            },
+          ],
+        },
+      }}
+    ></Bar>
+  );
 };
 
 export default Chart;
