@@ -6,6 +6,8 @@ import { Grid } from '@material-ui/core';
 
 import Cards from '../Cards/Cards';
 
+import { green } from '@material-ui/core/colors';
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     panel: {
@@ -18,8 +20,8 @@ const Panel = () => {
   const classes = useStyles();
   return (
     <Grid container component="section" spacing={4} className={classes.panel}>
-      <Cards title="monthly" />
-      <Cards title="yearly" />
+      <Cards title="monthly" color={green[400]} />
+      <Cards title="yearly" color={green[800]} />
     </Grid>
   );
 };
