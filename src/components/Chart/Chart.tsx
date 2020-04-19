@@ -4,7 +4,11 @@ import { Bar } from 'react-chartjs-2';
 
 import { GlobalState } from '../../GlobalContext';
 
+import List from '@material-ui/core/List';
+
 import green from '@material-ui/core/colors/green';
+
+import Legend from '../Legend/Legend';
 
 const Chart = () => {
   const { data } = GlobalState();
