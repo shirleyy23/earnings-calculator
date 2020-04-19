@@ -35,7 +35,7 @@ describe('<Cards>', () => {
       plan: 'basic',
       monthlyEarnings: 25,
       yearlyEarnings: 300,
-      updateData: () => void 0,
+      updateData: (): void => void 0,
     };
 
     const { getByTestId } = render(
@@ -54,7 +54,7 @@ describe('<Cards>', () => {
       plan: 'premium',
       monthlyEarnings: 62.5,
       yearlyEarnings: 750,
-      updateData: () => void 0,
+      updateData: (): void => void 0,
     };
 
     const { getByTestId } = render(
