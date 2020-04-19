@@ -8,6 +8,7 @@ import {
   Theme as AugmentedTheme,
   ThemeProvider,
 } from '@material-ui/core/styles';
+import Header from './components/Header/Header';
 
 declare module '@material-ui/core/styles/createMuiTheme' {
   interface Theme {
@@ -72,6 +73,10 @@ const App: React.FunctionComponent<{}> = () => {
               item
               xs={12}
               md={4}
+              className={`${classes.items} ${classes.formPanel}`}
+            >
+              <Header title="Calculate Earnings"></Header>
+            </Grid>
               className={(classes.items, classes.formPanel)}
             ></Grid>
             <Grid item xs={12} md={8} className={classes.items}></Grid>
