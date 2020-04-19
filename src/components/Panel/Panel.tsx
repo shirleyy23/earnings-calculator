@@ -19,7 +19,13 @@ const useStyles = makeStyles((theme: Theme) =>
 const Panel = () => {
   const classes = useStyles();
   return (
-    <Grid container component="section" spacing={4} className={classes.panel}>
+    <Grid
+      container
+      component="section"
+      spacing={4}
+      className={classes.panel}
+      data-testid="panel"
+    >
       <Cards title="monthly" color={green[400]} />
       <Cards title="yearly" color={green[800]} />
     </Grid>
