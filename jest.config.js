@@ -5,6 +5,7 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
+  setupFiles: ['jest-canvas-mock'],
   setupFilesAfterEnv: [
     '@testing-library/react/cleanup-after-each',
     '@testing-library/jest-dom/extend-expect',
