@@ -32,8 +32,11 @@ const Legend: React.FunctionComponent<Props> = (Props) => {
   const classes = useStyles(Props);
   const { title } = Props;
   return (
-    <ListItem className={classes.listItem}>
-      <span className={classes.legendIcon}></span>
+    <ListItem className={classes.listItem} data-testid={`legend-${title}`}>
+      <span
+        data-testid={`legend-icon-${title}`}
+        className={classes.legendIcon}
+      ></span>
       {title}
     </ListItem>
   );
