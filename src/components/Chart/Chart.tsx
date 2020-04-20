@@ -28,7 +28,7 @@ const Chart = () => {
     },
   };
   return (
-    <React.Fragment>
+    <section data-testid="chart">
       <List
         aria-label="Legend for earnings chart"
         style={{ textAlign: 'center' }}
@@ -66,7 +66,7 @@ const Chart = () => {
           },
         }}
       ></Bar>
-    </React.Fragment>
+    </section>
   );
 };
 
