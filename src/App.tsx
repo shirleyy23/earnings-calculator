@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme: AugmentedTheme) =>
   })
 );
 
-const App: React.FunctionComponent<{}> = () => {
+const App: React.FunctionComponent<Record<string, never>> = () => {
   const classes = useStyles();
 
   const [data, setData] = useState({
