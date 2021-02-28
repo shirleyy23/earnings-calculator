@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Panel: React.FunctionComponent<{}> = () => {
+const Panel: React.FunctionComponent<Record<string, unknown>> = () => {
   const classes = useStyles();
   return (
     <Grid

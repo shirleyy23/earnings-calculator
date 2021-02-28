@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme: AugmentedTheme) =>
   })
 );
 
-const App: React.FunctionComponent<{}> = () => {
+const App: React.FunctionComponent<Record<string, unknown>> = () => {
   const classes = useStyles();
 
   const [data, setData] = useState({
@@ -73,7 +73,7 @@ const App: React.FunctionComponent<{}> = () => {
     plan: 'select plan',
     monthlyEarnings: 0,
     yearlyEarnings: 0,
-    updateData: (name: string, value: any) => {
+    updateData: (name: string, value: number) => {
       setData((data) => ({ ...data, [name]: value }));
     },
   });
